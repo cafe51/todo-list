@@ -41,11 +41,41 @@ function efeitoListaRiscada() {
   listaTarefa.addEventListener('dblclick', listaRiscada);
 }
 
+function apagaTudo() {
+  const tarefas = document.querySelectorAll('.tarefa');
+  for (let i = 0; i < tarefas.length; i += 1) {
+    tarefas[i].parentNode.removeChild(tarefas[i]);
+  }
+}
+
+function botaoApagaTudoEvento() {
+  const botaoApagaTudo = document.querySelector('#apaga-tudo');
+  botaoApagaTudo.addEventListener('click', apagaTudo);
+}
+
+function apagaFinalizados() {
+  const tarefas = document.querySelectorAll('.tarefa');
+  for (let i = 0; i < tarefas.length; i += 1) {
+    if (tarefas[i].classList[1] === 'completed') {
+      tarefas[i].parentNode.removeChild(tarefas[i]);
+    }
+  }
+}
+
+function botaoApagaFinalizadosEvento() {
+  const botaoApagaFinalizados = document.querySelector('#remover-finalizados');
+  botaoApagaFinalizados.addEventListener('click', apagaFinalizados);
+}
+
 efeitoBotaoAdicinar();
 
 efeitoListaCinza();
 
 efeitoListaRiscada();
+
+botaoApagaTudoEvento();
+
+botaoApagaFinalizadosEvento();
 
 // .completed
 

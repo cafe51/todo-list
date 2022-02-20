@@ -1,3 +1,16 @@
 .completed {
 	text-decoration: line-through solid black;
 }
+
+.button {
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#buttons {
+	display: inline-block;
+}
+
+#criar-tarefa {
+	margin-left: 10px;
+}
