@@ -67,6 +67,22 @@ function botaoApagaFinalizadosEvento() {
   botaoApagaFinalizados.addEventListener('click', apagaFinalizados);
 }
 
+function apagaSelecionado() {
+  const tarefas = document.querySelectorAll('.tarefa');
+  for (let i = 0; i < tarefas.length; i += 1) {
+    if (tarefas[i].style.backgroundColor === 'grey') {
+      tarefas[i].parentNode.removeChild(tarefas[i]);
+    }
+  }
+}
+
+function botaoApagaSelecionadoEvento() {
+  const botaoApagaSelecionado = document.querySelector('#remover-selecionado');
+  botaoApagaSelecionado.addEventListener('click', apagaSelecionado);
+}
+
+// remover-selecionado
+
 efeitoBotaoAdicinar();
 
 efeitoListaCinza();
@@ -76,6 +92,8 @@ efeitoListaRiscada();
 botaoApagaTudoEvento();
 
 botaoApagaFinalizadosEvento();
+
+botaoApagaSelecionadoEvento();
 
 // .completed
 
