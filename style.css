@@ -5,16 +5,81 @@
 .button {
 	margin-left: 10px;
 	margin-top: 10px;
+	padding: 10px;
+	border-radius: 20px;
 }
 
 #buttons {
 	display: inline-block;
+	background-color: yellow;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding: 5px;
+	border-radius: 20px;
+	border: 1px solid;
 }
 
 #criar-tarefa {
 	margin-left: 10px;
+	padding: 10px;
+	border-radius: 20px;
 }
 
 .destacado {
 	background-color: grey;
+}
+
+header {
+	background-color: yellow;
+	width: fit-content;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding: 5px;
+	border-radius: 20px;
+	border: 1px solid;
+	margin-left: 50px;
+}
+
+h1 {
+	text-align: center;
+}
+
+#input {
+	background-color: grey;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: fit-content;
+	margin-left: 125px;
+	border-radius: 30px;
+}
+
+#lista {
+	margin-left: 170px;
+	width: fit-content;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+#remover-selecionado{
+	background-color: rgb(248, 66, 102);
+	color: white;
+}
+
+#mover-cima{
+	color: white;
+	background-color: mediumslateblue;
+}
+
+#mover-baixo{
+	color: white;
+	background-color: mediumslateblue;
+}
+
+#remover-finalizados{
+	background-color: rgb(248, 66, 102);
+	color: white;
+}
+
+#apaga-tudo{
+	background-color: rgb(248, 66, 102);
+	color: white;
 }
