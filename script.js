@@ -85,8 +85,13 @@ function botaoApagaSelecionadoEvento() {
 }
 
 function transferePropriedades(objeto1, objeto2) {
+  const aux = document.createElement('li');
+  aux.className = objeto1.className;
+  aux.innerText = objeto1.innerText;
   objeto1.className = objeto2.className;
   objeto1.innerText = objeto2.innerText;
+  objeto2.className = aux.className;
+  objeto2.innerText = aux.innerText;
 }
 
 function sobeSelecionado() {
@@ -94,9 +99,10 @@ function sobeSelecionado() {
   const aux = document.createElement('li');
   for (let i = 0; i < tarefas.length; i += 1) {
     if ((tarefas[i].classList[1] === 'destacado' || tarefas[i].classList[2]) && i > 0) {
-      transferePropriedades(aux, tarefas[i - 1]);
       transferePropriedades(tarefas[i - 1], tarefas[i]);
-      transferePropriedades(tarefas[i], aux);
+      // transferePropriedades(aux, tarefas[i - 1]);
+      // transferePropriedades(tarefas[i - 1], tarefas[i]);
+      // transferePropriedades(tarefas[i], aux);
     }
   }
 }
@@ -112,9 +118,10 @@ function desceSelecionado() {
   const limite = (tarefas.length - 1);
   for (let i = tarefas.length - 1; i >= 0; i -= 1) {
     if ((tarefas[i].classList[1] === 'destacado' || tarefas[i].classList[2]) && i !== limite) {
-      transferePropriedades(aux, tarefas[i + 1]);
       transferePropriedades(tarefas[i + 1], tarefas[i]);
-      transferePropriedades(tarefas[i], aux);
+      // transferePropriedades(aux, tarefas[i + 1]);
+      // transferePropriedades(tarefas[i + 1], tarefas[i]);
+      // transferePropriedades(tarefas[i], aux);
     }
   }
 }
